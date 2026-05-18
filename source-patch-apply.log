@@ -1,0 +1,236 @@
+Patch: 00_drop-alias-root.patch
+patching file src/http/ngx_http_core_module.c
+Hunk #3 succeeded at 4466 (offset 170 lines).
+Patch: 01_nginx-1.27.1-win32_max_err_str.patch
+patching file src/os/win32/ngx_event_log.c
+Patch: 02_nginx-1.27.1-stream_balancer_export.patch
+patching file src/stream/ngx_stream_upstream_round_robin.c
+Hunk #2 succeeded at 700 (offset 14 lines).
+Hunk #3 succeeded at 763 (offset 11 lines).
+patching file src/stream/ngx_stream_upstream_round_robin.h
+Hunk #1 succeeded at 143 (offset 1 line).
+Patch: 03_nginx-1.27.1-stream_proxy_get_next_upstream_tries.patch
+patching file src/stream/ngx_stream.h
+Hunk #1 succeeded at 380 (offset 77 lines).
+patching file src/stream/ngx_stream_proxy_module.c
+Hunk #1 succeeded at 2505 (offset 349 lines).
+Patch: 04_nginx-1.27.1-stream_proxy_timeout_fields.patch
+patching file src/stream/ngx_stream.h
+Hunk #1 succeeded at 311 (offset 57 lines).
+Hunk #2 succeeded at 380 (offset 64 lines).
+patching file src/stream/ngx_stream_proxy_module.c
+Hunk #1 succeeded at 402 (offset 2 lines).
+Hunk #2 succeeded at 411 (offset 2 lines).
+Hunk #3 succeeded at 713 (offset 2 lines).
+Hunk #4 succeeded at 721 (offset 2 lines).
+Hunk #5 succeeded at 786 (offset -3 lines).
+Hunk #6 succeeded at 957 (offset -15 lines).
+Hunk #7 succeeded at 992 (offset -1 lines).
+Hunk #8 succeeded at 1067 (offset -1 lines).
+Hunk #9 succeeded at 1118 (offset 1 line).
+Hunk #10 succeeded at 1427 (offset 1 line).
+Hunk #11 succeeded at 1439 (offset 1 line).
+Hunk #12 succeeded at 1460 (offset 1 line).
+Hunk #13 succeeded at 1622 (offset 1 line).
+Hunk #14 succeeded at 1816 (offset -15 lines).
+Patch: 05_nginx-1.27.1-stream_ssl_preread_no_skip.patch
+patching file src/stream/ngx_stream_ssl_preread_module.c
+Patch: 06_nginx-1.27.1-resolver_conf_parsing.patch
+patching file src/core/ngx_resolver.c
+Hunk #2 succeeded at 143 (offset -2 lines).
+Hunk #3 succeeded at 461 (offset 16 lines).
+Patch: 07_nginx-1.27.1-daemon_destroy_pool.patch
+patching file src/os/unix/ngx_daemon.c
+Patch: 08_nginx-1.27.1-init_cycle_pool_release.patch
+patching file src/core/nginx.c
+Hunk #1 succeeded at 188 (offset 2 lines).
+Hunk #2 succeeded at 257 (offset 3 lines).
+patching file src/core/ngx_core.h
+Hunk #1 succeeded at 117 (offset 9 lines).
+patching file src/core/ngx_cycle.c
+Hunk #1 succeeded at 768 (offset 20 lines).
+patching file src/os/unix/ngx_process_cycle.c
+Hunk #1 succeeded at 689 (offset 2 lines).
+Patch: 09_nginx-1.27.1-balancer_status_code.patch
+patching file src/http/ngx_http_upstream.c
+Hunk #1 succeeded at 1563 (offset 48 lines).
+patching file src/http/ngx_http_upstream.h
+Hunk #1 succeeded at 439 (offset 12 lines).
+patching file src/stream/ngx_stream.h
+patching file src/stream/ngx_stream_proxy_module.c
+Hunk #1 succeeded at 755 (offset 64 lines).
+patching file src/stream/ngx_stream_upstream.h
+Hunk #1 succeeded at 157 (offset 6 lines).
+Patch: 10_nginx-1.27.1-delayed_posted_events.patch
+patching file src/event/ngx_event.c
+Hunk #1 succeeded at 197 (offset 1 line).
+Hunk #2 succeeded at 219 (offset 1 line).
+Hunk #3 succeeded at 271 with fuzz 1 (offset 4 lines).
+Hunk #4 succeeded at 710 with fuzz 2 (offset 71 lines).
+patching file src/event/ngx_event_posted.c
+Hunk #1 succeeded at 13 with fuzz 2 (offset 1 line).
+patching file src/event/ngx_event_posted.h
+Hunk #1 succeeded at 45 with fuzz 2 (offset 2 lines).
+Patch: 11_nginx-1.27.1-privileged_agent_process.patch
+patching file src/core/nginx.c
+Hunk #1 succeeded at 1116 with fuzz 2 (offset 135 lines).
+Hunk #2 succeeded at 1146 with fuzz 2 (offset 136 lines).
+patching file src/core/ngx_cycle.h
+Hunk #2 succeeded at 92 with fuzz 1 (offset 8 lines).
+patching file src/os/unix/ngx_process_cycle.c
+Hunk #3 succeeded at 55 (offset 1 line).
+Hunk #8 succeeded at 402 with fuzz 1.
+Hunk #9 succeeded at 830 (offset 7 lines).
+Hunk #10 succeeded at 1174 with fuzz 1 (offset -7 lines).
+patching file src/os/unix/ngx_process_cycle.h
+Patch: 12_nginx-1.27.1-privileged_agent_process_connections.patch
+patching file src/core/nginx.c
+Hunk #1 succeeded at 1117 (offset 55 lines).
+Hunk #2 succeeded at 1148 (offset 55 lines).
+patching file src/core/ngx_cycle.h
+patching file src/os/unix/ngx_process_cycle.c
+Hunk #1 succeeded at 1177 (offset -2 lines).
+Hunk #2 succeeded at 1189 (offset -2 lines).
+patching file src/os/unix/ngx_process_cycle.c
+Hunk #1 succeeded at 413 (offset -29 lines).
+Patch: 13_nginx-1.27.1-privileged_agent_process_thread_pool.patch
+patching file src/core/ngx_thread_pool.c
+Patch: 14_nginx-1.27.1-single_process_graceful_exit.patch
+patching file src/os/unix/ngx_process.c
+patching file src/os/unix/ngx_process_cycle.c
+Hunk #1 succeeded at 304 (offset -1 lines).
+Hunk #2 succeeded at 334 (offset -1 lines).
+Patch: 15_nginx-1.27.1-intercept_error_log.patch
+patching file src/core/ngx_cycle.h
+Hunk #1 succeeded at 25 with fuzz 1 (offset 3 lines).
+Hunk #2 succeeded at 91 with fuzz 1 (offset 11 lines).
+patching file src/core/ngx_log.c
+Patch: 16_nginx-1.27.1-upstream_pipelining.patch
+patching file src/http/ngx_http_upstream.c
+Hunk #1 succeeded at 2338 (offset 99 lines).
+Patch: 17_nginx-1.27.1-no_error_pages.patch
+patching file src/http/ngx_http_core_module.c
+Hunk #1 succeeded at 63 (offset -1 lines).
+Hunk #2 succeeded at 657 (offset -16 lines).
+Hunk #3 succeeded at 3558 (offset -16 lines).
+Hunk #4 succeeded at 3567 (offset -16 lines).
+Hunk #5 succeeded at 3770 (offset -16 lines).
+Hunk #6 succeeded at 4731 (offset -92 lines).
+Hunk #7 succeeded at 4840 (offset -92 lines).
+Patch: 18_nginx-1.27.1-no_Werror.patch
+patching file auto/cc/clang
+Hunk #1 succeeded at 89 with fuzz 1.
+patching file auto/cc/gcc
+Hunk #1 succeeded at 166 (offset -2 lines).
+patching file auto/cc/icc
+Hunk #1 succeeded at 111 (offset -4 lines).
+Patch: 19_nginx-1.27.1-log_escape_non_ascii.patch
+patching file src/http/modules/ngx_http_log_module.c
+Hunk #2 succeeded at 138 (offset 5 lines).
+Hunk #3 succeeded at 189 (offset 9 lines).
+Hunk #4 succeeded at 961 (offset 16 lines).
+Hunk #5 succeeded at 970 (offset 16 lines).
+Hunk #6 succeeded at 983 (offset 16 lines).
+Hunk #7 succeeded at 997 (offset 16 lines).
+Hunk #8 succeeded at 1028 (offset 16 lines).
+Hunk #9 succeeded at 1191 (offset 49 lines).
+Hunk #10 succeeded at 1207 (offset 49 lines).
+Patch: 20_nginx-1.27.1-proxy_host_port_vars.patch
+patching file src/http/modules/ngx_http_proxy_module.c
+Hunk #1 succeeded at 872 (offset 79 lines).
+Patch: 21_nginx-1.27.1-cache_manager_exit.patch
+patching file src/os/unix/ngx_process_cycle.c
+Hunk #1 succeeded at 1197 (offset 63 lines).
+Patch: 22_nginx-1.27.1-larger_max_error_str.patch
+patching file src/core/ngx_log.h
+Hunk #1 succeeded at 73 (offset 9 lines).
+Patch: 23_nginx-1.27.1-pcre_conf_opt.patch
+patching file auto/options
+Hunk #1 succeeded at 368 with fuzz 2 (offset 82 lines).
+Hunk #2 succeeded at 590 with fuzz 2 (offset 148 lines).
+Patch: 24_nginx-1.27.1-always_enable_cc_feature_tests.patch
+patching file auto/cc/conf
+Patch: 25_nginx-1.27.1-ssl_cert_cb_yield.patch
+patching file src/event/ngx_event_openssl.c
+Hunk #1 succeeded at 1914 (offset 469 lines).
+Hunk #2 succeeded at 2078 (offset 503 lines).
+Patch: 26_nginx-1.27.1-ssl_sess_cb_yield.patch
+patching file src/event/ngx_event_openssl.c
+Hunk #1 succeeded at 1915 (offset 469 lines).
+Hunk #2 succeeded at 2098 (offset 518 lines).
+Patch: 27_nginx-1.27.1-ssl_client_hello_cb_yield.patch
+patching file src/event/ngx_event_openssl.c
+Hunk #1 succeeded at 1918 (offset 206 lines).
+Hunk #2 succeeded at 2118 (offset 226 lines).
+Patch: 28_nginx-1.27.1-CVE-2025-23419.patch
+patching file src/http/ngx_http_request.c
+patching file src/stream/ngx_stream_ssl_module.c
+Patch: 29_nginx-1.27.1-upstream_timeout_fields.patch
+patching file src/http/ngx_http_upstream.c
+Hunk #1 succeeded at 508 (offset -1 lines).
+Hunk #2 succeeded at 1674 (offset 41 lines).
+Hunk #3 succeeded at 1761 (offset 50 lines).
+Hunk #4 succeeded at 2124 (offset 95 lines).
+Hunk #5 succeeded at 2190 (offset 99 lines).
+Hunk #6 succeeded at 3345 (offset 125 lines).
+Hunk #7 succeeded at 3591 (offset 126 lines).
+Hunk #8 succeeded at 3610 (offset 133 lines).
+Hunk #9 succeeded at 3819 (offset 148 lines).
+patching file src/http/ngx_http_upstream.h
+Hunk #1 succeeded at 337 (offset 4 lines).
+Patch: 30_nginx-1.27.1-safe_resolver_ipv6_option.patch
+patching file src/core/ngx_resolver.c
+Patch: 31_nginx-1.27.1-socket_cloexec.patch
+patching file auto/unix
+Hunk #1 succeeded at 1050 (offset 60 lines).
+patching file src/core/ngx_resolver.c
+Hunk #1 succeeded at 4790 (offset 324 lines).
+Hunk #2 succeeded at 4824 (offset 324 lines).
+patching file src/event/ngx_event.h
+patching file src/event/ngx_event_accept.c
+Hunk #1 succeeded at 60 (offset -2 lines).
+Hunk #2 succeeded at 202 (offset -2 lines).
+patching file src/event/ngx_event_connect.c
+Hunk #2 succeeded at 99 (offset 12 lines).
+patching file src/os/unix/ngx_process_cycle.c
+Hunk #1 succeeded at 1028 (offset 68 lines).
+patching file src/os/unix/ngx_socket.h
+Hunk #1 succeeded at 47 (offset 9 lines).
+Patch: 32_nginx-1.27.1-reuseport_close_unused_fds.patch
+patching file src/core/ngx_connection.c
+Hunk #1 succeeded at 1115 with fuzz 2 (offset -3 lines).
+patching file src/event/ngx_event.c
+Hunk #1 succeeded at 846 (offset 71 lines).
+Patch: 33_nginx-1.27.1-proc_exit_handler.patch
+patching file src/core/ngx_cycle.c
+patching file src/os/unix/ngx_process.c
+patching file src/os/unix/ngx_process.h
+Patch: 34_nginx-1.27.1-stream_proxy_protocol_v2.patch
+patching file src/core/ngx_proxy_protocol.c
+patching file src/core/ngx_proxy_protocol.h
+patching file src/stream/ngx_stream_proxy_module.c
+patching file src/stream/ngx_stream_upstream.h
+Patch: 35_nginx-1.27.1-CVE-2026-40460.patch
+patching file src/event/quic/ngx_event_quic_migration.c
+Hunk #1 succeeded at 193 (offset -1 lines).
+Hunk #2 succeeded at 512 (offset -1 lines).
+Hunk #3 succeeded at 809 (offset -1 lines).
+Patch: 36_nginx-1.27.1-CVE-2026-40701.patch
+patching file src/event/ngx_event_openssl_stapling.c
+Hunk #1 succeeded at 111 (offset -2 lines).
+Hunk #2 succeeded at 1304 (offset -38 lines).
+Hunk #3 succeeded at 1400 (offset -38 lines).
+Hunk #4 succeeded at 1492 (offset -38 lines).
+Hunk #5 succeeded at 1500 (offset -38 lines).
+Patch: 37_nginx-1.27.1-CVE-2026-42934.patch
+patching file src/http/modules/ngx_http_charset_filter_module.c
+Patch: 38_nginx-1.27.1-CVE-2026-42945.patch
+patching file src/http/ngx_http_script.c
+Patch: 39_nginx-1.27.1-CVE-2026-42946.patch
+patching file src/http/modules/ngx_http_scgi_module.c
+Hunk #1 succeeded at 1029 (offset -7 lines).
+patching file src/http/modules/ngx_http_uwsgi_module.c
+Hunk #1 succeeded at 1257 (offset -18 lines).
+patching file src/http/ngx_http.h
+patching file src/http/ngx_http_parse.c
+Hunk #1 succeeded at 1648 (offset -55 lines).
