@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-TAG="${TAG:-1.14.5-p6}"
+TAG="${TAG:-1.14.5-p7}"
 REGISTRY="${REGISTRY:-renebakx}"
 ARCHES="${ARCHES:-amd64 arm64}"
 CONTROLLER_IMAGE="${CONTROLLER_IMAGE:-${REGISTRY}/nginx-ingress-controller:${TAG}}"
@@ -9,6 +9,9 @@ BUILDER="${BUILDER:-ingress-nginx-local}"
 REPO_INFO="${REPO_INFO:-https://github.com/rancher/ingress-nginx}"
 NO_CACHE="${NO_CACHE:-true}"
 PUSH="${PUSH:-true}"
+BUILD_LOG_DIR="${BUILD_LOG_DIR:-build-logs}"
+PROVENANCE="${PROVENANCE:-true}"
+SBOM="${SBOM:-true}"
 
 build_cache_args=()
 if [[ "${NO_CACHE}" == "true" ]]; then
@@ -210,17 +213,57 @@ if [[ "${PUSH}" == "true" ]]; then
   output_args=(--push)
 fi
 
+attest_args=()
+if [[ "${PUSH}" == "true" ]]; then
+  if [[ "${PROVENANCE}" == "true" ]]; then
+    attest_args+=(--provenance=mode=max)
+  fi
+  if [[ "${SBOM}" == "true" ]]; then
+    attest_args+=(--sbom=true)
+  fi
+fi
+
+mkdir -p "${BUILD_LOG_DIR}"
+BUILD_LOG_FILE="${BUILD_LOG_DIR}/build-${TAG}-$(date +%Y%m%d-%H%M%S).log"
+echo "Capturing build log to ${BUILD_LOG_FILE}"
+
+set -o pipefail
 docker buildx build \
   "${build_cache_args[@]}" \
   --builder "${BUILDER}" \
   --platform "${PLATFORMS}" \
   --progress=plain \
   "${output_args[@]}" \
+  "${attest_args[@]}" \
   --build-arg VERSION="${TAG}" \
   --build-arg COMMIT_SHA="${COMMIT_SHA}" \
   -t "${CONTROLLER_IMAGE}" \
   -f "${tmp_dockerfile}" \
-  .
+  . 2>&1 | tee "${BUILD_LOG_FILE}"
+
+echo "Asserting CVE patches were applied during nginx build (build log inspection)"
+required_cve_patches=(
+  "35_nginx-1.27.1-CVE-2026-40460.patch"
+  "36_nginx-1.27.1-CVE-2026-40701.patch"
+  "37_nginx-1.27.1-CVE-2026-42934.patch"
+  "38_nginx-1.27.1-CVE-2026-42945.patch"
+  "39_nginx-1.27.1-CVE-2026-42946.patch"
+)
+patch_missing=0
+for p in "${required_cve_patches[@]}"; do
+  expected_count=$(echo "${PLATFORMS}" | tr ',' '\n' | wc -l | tr -d ' ')
+  actual_count=$(grep -c "Patch: ${p}" "${BUILD_LOG_FILE}" || true)
+  if [[ "${actual_count}" -lt "${expected_count}" ]]; then
+    echo "  MISSING: ${p} (expected >=${expected_count} apply lines, found ${actual_count})" >&2
+    patch_missing=1
+  else
+    echo "  ok: ${p} (${actual_count} apply lines across platforms)"
+  fi
+done
+if [[ "${patch_missing}" -ne 0 ]]; then
+  echo "FAIL: one or more CVE patches were not observed in the build log; refusing to mark build as good." >&2
+  exit 1
+fi
 
 for ARCH in ${ARCHES}; do
   PLATFORM="linux/${ARCH}"
@@ -233,4 +276,10 @@ for ARCH in ${ARCHES}; do
     -c 'ldd /etc/nginx/modules/* | grep "not found" && exit 1 || true'
 done
 
+if [[ "${PUSH}" == "true" ]]; then
+  echo "Resolving published image digest"
+  docker buildx imagetools inspect "${CONTROLLER_IMAGE}" | tee "${BUILD_LOG_DIR}/imagetools-${TAG}.txt"
+fi
+
 echo "Done: ${CONTROLLER_IMAGE}"
+echo "Build log: ${BUILD_LOG_FILE}"
