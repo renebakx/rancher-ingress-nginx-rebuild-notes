@@ -1,0 +1,26 @@
+Name:      docker.io/renebakx/nginx-ingress-controller:1.14.5-p6
+MediaType: application/vnd.oci.image.index.v1+json
+Digest:    sha256:e72ddc3d31bd187b8377b2c652edcb43ac7aa1c789615f300a96879239252dba
+           
+Manifests: 
+  Name:        docker.io/renebakx/nginx-ingress-controller:1.14.5-p6@sha256:b2412cd3d4368b69fd21d6ef47acb09217494dcfcdd5090898df4525e1c8e03c
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/amd64
+               
+  Name:        docker.io/renebakx/nginx-ingress-controller:1.14.5-p6@sha256:538546d63509e28cec642321d2ad636f10707e4c643dc3f17652b8eb3c918510
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/arm64
+               
+  Name:        docker.io/renebakx/nginx-ingress-controller:1.14.5-p6@sha256:a2949fe09c003ec70457ed187ad6b216e02efe1bc8e7b666a42915896333bc47
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    vnd.docker.reference.digest: sha256:b2412cd3d4368b69fd21d6ef47acb09217494dcfcdd5090898df4525e1c8e03c
+    vnd.docker.reference.type:   attestation-manifest
+               
+  Name:        docker.io/renebakx/nginx-ingress-controller:1.14.5-p6@sha256:9e82179133e1faccd33d31c17317e95eb805e73a7e37e49f31eee6d50fc8ccc1
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    vnd.docker.reference.digest: sha256:538546d63509e28cec642321d2ad636f10707e4c643dc3f17652b8eb3c918510
+    vnd.docker.reference.type:   attestation-manifest

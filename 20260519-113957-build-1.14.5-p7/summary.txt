@@ -1,0 +1,13 @@
+image=renebakx/nginx-ingress-controller:1.14.5-p7
+nginx_version=1.27.1
+generated_at=2026-05-19T09:39:57Z
+repo=https://github.com/rancher/ingress-nginx.git
+git_commit=1134a65f6e3abc2b632e828dc0257dde4455eb60
+git_describe=v1.14.5-prime6
+
+cve_patches:
+  images/nginx/rootfs/patches/35_nginx-1.27.1-CVE-2026-40460.patch
+  images/nginx/rootfs/patches/36_nginx-1.27.1-CVE-2026-40701.patch
+  images/nginx/rootfs/patches/37_nginx-1.27.1-CVE-2026-42934.patch
+  images/nginx/rootfs/patches/38_nginx-1.27.1-CVE-2026-42945.patch
+  images/nginx/rootfs/patches/39_nginx-1.27.1-CVE-2026-42946.patch

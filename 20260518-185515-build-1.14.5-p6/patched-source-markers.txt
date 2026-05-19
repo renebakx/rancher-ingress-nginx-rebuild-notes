@@ -1,0 +1,27 @@
+CVE-2026-40460
+196:    ngx_quic_set_connection_path(c, path);
+
+CVE-2026-40701
+114:    ngx_resolver_ctx_t          *resolve;
+1403:        ctx->resolve = resolve;
+1406:            ctx->resolve = NULL;
+1495:    ctx->resolve = NULL;
+1503:    ctx->resolve = NULL;
+
+CVE-2026-42934
+785:    len = ngx_min(NGX_UTF_LEN - ctx->saved_len, (size_t) (buf->last - src));
+819:            ctx->saved_len = len;
+921:            ctx->saved_len = len;
+
+CVE-2026-42945
+1205:    e->is_args = 0;
+
+CVE-2026-42946
+src/http/modules/ngx_http_scgi_module.c:526:    r->state = 0;
+src/http/modules/ngx_http_scgi_module.c:1002:    r->state = 0;
+src/http/modules/ngx_http_scgi_module.c:1032:        r->state = 0;
+src/http/modules/ngx_http_uwsgi_module.c:707:    r->state = 0;
+src/http/modules/ngx_http_uwsgi_module.c:1230:    r->state = 0;
+src/http/modules/ngx_http_uwsgi_module.c:1260:        r->state = 0;
+src/http/ngx_http.h:75:    u_char              *line_start;
+src/http/ngx_http_parse.c:1651:            status->line_start = p;
