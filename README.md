@@ -11,5 +11,5 @@ No upstream source files were intentionally modified beyond applying patches alr
 ## Changelog
 - 18-05-26 Initial creation of this repository
 - 19-05-26 Updated the build and evidence scripts to emit more proof of the applied patches. Build 1.14.5-p7 at Docker hub is the output of those scripts. No changes were made to the upstream code base.
-   
+- 27-05-26 Added the evidence 20260527-121116-build-1.14.5-p8, that release added 40_nginx-1.27.1-CVE-2026-9256.patch.
   
