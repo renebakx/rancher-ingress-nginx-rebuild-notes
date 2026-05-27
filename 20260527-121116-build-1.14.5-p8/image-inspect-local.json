@@ -1,0 +1,116 @@
+[
+    {
+        "Id": "sha256:1446be31688e90700a456121b79a97bd775f9b38f68201015905237cb6b8bd2e",
+        "RepoTags": [
+            "renebakx/nginx-ingress-controller:1.14.5-p8"
+        ],
+        "RepoDigests": [
+            "renebakx/nginx-ingress-controller@sha256:1446be31688e90700a456121b79a97bd775f9b38f68201015905237cb6b8bd2e"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-05-27T09:33:36.67729476Z",
+        "Author": "SUSE LLC <https://www.suse.com/>",
+        "Config": {
+            "User": "www-data",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/luajit/bin:/usr/local/nginx/sbin:/usr/local/nginx/bin",
+                "LUA_PATH=/usr/local/share/luajit-2.1.0-beta3/?.lua;/usr/local/share/lua/5.1/?.lua;/usr/local/lib/lua/?.lua;;",
+                "LUA_CPATH=/usr/local/lib/lua/?/?.so;/usr/local/lib/lua/?.so;;"
+            ],
+            "Entrypoint": [
+                "/usr/bin/catatonit",
+                "--"
+            ],
+            "Cmd": [
+                "/nginx-ingress-controller"
+            ],
+            "WorkingDir": "/etc/nginx",
+            "Labels": {
+                "build_id": "UNSET",
+                "com.suse.bci.base.authors": "https://github.com/SUSE/bci/discussions",
+                "com.suse.bci.base.created": "2026-05-26T21:30:15.339130960Z",
+                "com.suse.bci.base.description": "Image for containers based on SUSE Linux Enterprise Server 16.0.",
+                "com.suse.bci.base.disturl": "obs://build.suse.de/SUSE:SLFO:Products:BCI:16.0/containerkiwi/18e52a71bfa817d73de9593e223d254a-base-image",
+                "com.suse.bci.base.eula": "sle-bci",
+                "com.suse.bci.base.lifecycle-url": "https://www.suse.com/lifecycle#suse-linux-enterprise-server-16",
+                "com.suse.bci.base.name": "16.0-20.4",
+                "com.suse.bci.base.reference": "registry.suse.com/bci/bci-base:16.0-20.4",
+                "com.suse.bci.base.release-stage": "released",
+                "com.suse.bci.base.source": "https://sources.suse.com/SUSE:SLFO:Products:BCI:16.0/base-image/18e52a71bfa817d73de9593e223d254a/",
+                "com.suse.bci.base.supportlevel": "l3",
+                "com.suse.bci.base.title": "SUSE Linux BCI 16.0 Base",
+                "com.suse.bci.base.until": "2027-11-30",
+                "com.suse.bci.base.url": "https://www.suse.com/products/base-container-images/",
+                "com.suse.bci.base.vendor": "SUSE LLC",
+                "com.suse.bci.base.version": "16.0-20.4",
+                "com.suse.eula": "sle-bci",
+                "com.suse.lifecycle-url": "https://www.suse.com/lifecycle#suse-linux-enterprise-server-16",
+                "com.suse.release-stage": "released",
+                "com.suse.supportlevel": "l3",
+                "com.suse.supportlevel.until": "2027-11-30",
+                "io.artifacthub.package.logo-url": "https://opensource.suse.com/bci/SLE_BCI_logomark_green.svg",
+                "io.artifacthub.package.readme-url": "https://sources.suse.com/SUSE:SLFO:Products:BCI:16.0/base-image/18e52a71bfa817d73de9593e223d254a/README.md",
+                "org.openbuildservice.disturl": "obs://build.suse.de/SUSE:SLFO:Products:BCI:16.0/containerkiwi/18e52a71bfa817d73de9593e223d254a-base-image",
+                "org.opencontainers.image.authors": "https://github.com/SUSE/bci/discussions",
+                "org.opencontainers.image.created": "2026-05-26T21:30:15.339130960Z",
+                "org.opencontainers.image.description": "Image for containers based on SUSE Linux Enterprise Server 16.0.",
+                "org.opencontainers.image.documentation": "https://kubernetes.github.io/ingress-nginx/",
+                "org.opencontainers.image.licenses": "Apache-2.0",
+                "org.opencontainers.image.ref.name": "16.0-20.4",
+                "org.opencontainers.image.revision": "5e111090e",
+                "org.opencontainers.image.source": "https://github.com/kubernetes/ingress-nginx",
+                "org.opencontainers.image.title": "NGINX Ingress Controller for Kubernetes",
+                "org.opencontainers.image.url": "https://www.suse.com/products/base-container-images/",
+                "org.opencontainers.image.vendor": "The Kubernetes Authors",
+                "org.opencontainers.image.version": "1.14.5-p8",
+                "org.opensuse.reference": "registry.suse.com/bci/bci-base:16.0-20.4"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "arm64",
+        "Os": "linux",
+        "Size": 278740806,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:2a2bebcddbe46ec7685349be91529a6eb2c4ec4ad59576248144173d7d2de833",
+                "sha256:ed9bf3bcf0887aad01fda79fffd7ade634d7de07616b14eb21145d3cd1de3235",
+                "sha256:4ed1c6a3a0c70c07e97ce0dc15120bde73ce569dd1f319743dca4cad19b46d12",
+                "sha256:4c2a26aeac484377c2fb4c2723108c79ba41118b750c997ea22e5c47c505fbbb",
+                "sha256:144b68d5c83169c24d5d7f47ba9b3a4742e0a8c0702e65e3aae0167f4375fb72",
+                "sha256:3a647a9d04daf44613f90c9c86beec85eb8cfbd5539cdc81301b4b0cbf55bce6",
+                "sha256:e88dc63d2493d7cd3cf8c8dd021f4edff2dd0db49ddeaf82b3d905dc5d9daedf",
+                "sha256:7d082a9a7b9b8ac8c28076cb26e3a7e5f1b98f494a84f5a8b8bd63f8d7781308",
+                "sha256:e40b164acaecb412b1fdb8a6c587ac9d320a747c3be703a08dcbd3c4004d3e22",
+                "sha256:f6e571a5d004a15a18b4897228c05986676af0c8c88b06103c9ff07e81667944",
+                "sha256:3591b345448cb7ea919a5dbacc3abaa049af0b5eddb0d838933d7263277b020b",
+                "sha256:2794f33e0b20624c9d0892a161f48b048dd32d03eb0929444e9e34ec053744ac",
+                "sha256:d9a9e3dba20423fc3b80cc980ea027b08432776772bf5615d5836c2a4bef8be2",
+                "sha256:4dcb0a1fe90c4b9c8569791ce2ea37f29544936e54ac032d85e1e940f757e268",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:fc3b5bd65dcf5830e9a58a6fcff827148e84830df71267b5049c436718dfe9f2",
+                "sha256:811c77c88c23e26b4657ed29125376058da5c5cdfbc22fa0cd306385152bf31a",
+                "sha256:46708ebd0372e67943a6d1a416b62222aa4212709413b4299821831c00213590",
+                "sha256:4db6260c6d70ec5a8b7199f0761dcb786b29481563295bd7171c2c588a2af09b",
+                "sha256:0fab37aff66148247abb45cbd4f639d924c4774f1f54e57b31be95a7c91eb630",
+                "sha256:a656215bbb5053353fe6683f1315574c6ce9f60e7295e1dea668c222c692234b",
+                "sha256:a8da8dfd9f73d9d5bdb3f5215c3db5b549900b89eb9c37ff045761ea53245fe1"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-05-27T09:46:05.520649592Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:1446be31688e90700a456121b79a97bd775f9b38f68201015905237cb6b8bd2e",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/renebakx/nginx-ingress-controller"
+                }
+            ]
+        }
+    }
+]

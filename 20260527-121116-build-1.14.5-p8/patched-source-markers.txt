@@ -1,0 +1,147 @@
+CVE-2026-40460
+196:    ngx_quic_set_connection_path(c, path);
+
+CVE-2026-40701
+114:    ngx_resolver_ctx_t          *resolve;
+1403:        ctx->resolve = resolve;
+1406:            ctx->resolve = NULL;
+1495:    ctx->resolve = NULL;
+1503:    ctx->resolve = NULL;
+
+CVE-2026-42934
+785:    len = ngx_min(NGX_UTF_LEN - ctx->saved_len, (size_t) (buf->last - src));
+819:            ctx->saved_len = len;
+921:            ctx->saved_len = len;
+
+CVE-2026-42945
+1192:    e->is_args = 0;
+1212:    e->is_args = 0;
+
+CVE-2026-42946
+src/http/modules/ngx_http_scgi_module.c:526:    r->state = 0;
+src/http/modules/ngx_http_scgi_module.c:1002:    r->state = 0;
+src/http/modules/ngx_http_scgi_module.c:1032:        r->state = 0;
+src/http/modules/ngx_http_uwsgi_module.c:707:    r->state = 0;
+src/http/modules/ngx_http_uwsgi_module.c:1230:    r->state = 0;
+src/http/modules/ngx_http_uwsgi_module.c:1260:        r->state = 0;
+src/http/ngx_http.h:75:    u_char              *line_start;
+src/http/ngx_http_parse.c:1651:            status->line_start = p;
+
+CVE-2026-9256
+1063:    if (mp4->buffer_pos && mp4->buffer_end
+1148:        cap = r->captures;
+1361:        cap = r->captures;
+1401:        cap = r->captures;
+1149:        p = r->captures_data;
+1366:            p = r->captures_data;
+1402:        p = r->captures_data;
+1779:    le.is_args = e->is_args;
+241:                          "too long response header value: "
+271:                          "too long response header value: \"Location: %V\"",
+393:                          "too long response header value: \"%V: %V\"",
+src/mail/ngx_mail_imap_handler.c:51:        return;
+src/mail/ngx_mail_imap_handler.c:73:        return;
+src/mail/ngx_mail_imap_handler.c:83:            return;
+src/mail/ngx_mail_imap_handler.c:91:            return;
+src/mail/ngx_mail_imap_handler.c:120:        return;
+src/mail/ngx_mail_imap_handler.c:129:            return;
+src/mail/ngx_mail_imap_handler.c:132:        return;
+src/mail/ngx_mail_imap_handler.c:142:            return;
+src/mail/ngx_mail_imap_handler.c:145:        return;
+src/mail/ngx_mail_imap_handler.c:149:        return;
+src/mail/ngx_mail_imap_handler.c:238:        return;
+src/mail/ngx_mail_imap_handler.c:242:        return;
+src/mail/ngx_mail_imap_handler.c:261:                return;
+src/mail/ngx_mail_imap_handler.c:297:        return;
+src/mail/ngx_mail_pop3_handler.c:47:            return;
+src/mail/ngx_mail_pop3_handler.c:53:            return;
+src/mail/ngx_mail_pop3_handler.c:72:        return;
+src/mail/ngx_mail_pop3_handler.c:93:        return;
+src/mail/ngx_mail_pop3_handler.c:103:            return;
+src/mail/ngx_mail_pop3_handler.c:109:            return;
+src/mail/ngx_mail_pop3_handler.c:136:        return;
+src/mail/ngx_mail_pop3_handler.c:145:            return;
+src/mail/ngx_mail_pop3_handler.c:148:        return;
+src/mail/ngx_mail_pop3_handler.c:158:            return;
+src/mail/ngx_mail_pop3_handler.c:161:        return;
+src/mail/ngx_mail_pop3_handler.c:165:        return;
+src/mail/ngx_mail_pop3_handler.c:274:        return;
+src/mail/ngx_mail_pop3_handler.c:278:        return;
+src/mail/ngx_mail_pop3_handler.c:303:            return;
+src/mail/ngx_mail_proxy_module.c:143:        return;
+src/mail/ngx_mail_proxy_module.c:159:        return;
+src/mail/ngx_mail_proxy_module.c:176:        return;
+src/mail/ngx_mail_proxy_module.c:202:        return;
+src/mail/ngx_mail_proxy_module.c:247:        return;
+src/mail/ngx_mail_proxy_module.c:255:            return;
+src/mail/ngx_mail_proxy_module.c:258:        return;
+src/mail/ngx_mail_proxy_module.c:266:            return;
+src/mail/ngx_mail_proxy_module.c:269:        return;
+src/mail/ngx_mail_proxy_module.c:274:        return;
+src/mail/ngx_mail_proxy_module.c:288:            return;
+src/mail/ngx_mail_proxy_module.c:307:            return;
+src/mail/ngx_mail_proxy_module.c:338:        return;
+src/mail/ngx_mail_proxy_module.c:353:        return;
+src/mail/ngx_mail_proxy_module.c:358:        return;
+src/mail/ngx_mail_proxy_module.c:387:        return;
+src/mail/ngx_mail_proxy_module.c:395:            return;
+src/mail/ngx_mail_proxy_module.c:398:        return;
+src/mail/ngx_mail_proxy_module.c:406:            return;
+src/mail/ngx_mail_proxy_module.c:409:        return;
+src/mail/ngx_mail_proxy_module.c:414:        return;
+src/mail/ngx_mail_proxy_module.c:430:            return;
+src/mail/ngx_mail_proxy_module.c:449:            return;
+src/mail/ngx_mail_proxy_module.c:469:            return;
+src/mail/ngx_mail_proxy_module.c:499:        return;
+src/mail/ngx_mail_proxy_module.c:514:        return;
+src/mail/ngx_mail_proxy_module.c:519:        return;
+src/mail/ngx_mail_proxy_module.c:550:        return;
+src/mail/ngx_mail_proxy_module.c:558:            return;
+src/mail/ngx_mail_proxy_module.c:561:        return;
+src/mail/ngx_mail_proxy_module.c:569:            return;
+src/mail/ngx_mail_proxy_module.c:572:        return;
+src/mail/ngx_mail_proxy_module.c:577:        return;
+src/mail/ngx_mail_proxy_module.c:593:            return;
+src/mail/ngx_mail_proxy_module.c:639:            return;
+src/mail/ngx_mail_proxy_module.c:693:            return;
+src/mail/ngx_mail_proxy_module.c:726:            return;
+src/mail/ngx_mail_proxy_module.c:733:            return;
+src/mail/ngx_mail_proxy_module.c:745:            return;
+src/mail/ngx_mail_proxy_module.c:771:            return;
+src/mail/ngx_mail_proxy_module.c:791:            return;
+src/mail/ngx_mail_proxy_module.c:836:        return;
+src/mail/ngx_mail_proxy_module.c:851:        return;
+src/mail/ngx_mail_proxy_module.c:856:        return;
+src/mail/ngx_mail_proxy_module.c:877:            return;
+src/mail/ngx_mail_proxy_module.c:885:        return;
+src/mail/ngx_mail_proxy_module.c:1148:        return;
+src/mail/ngx_mail_proxy_module.c:1203:                    return;
+src/mail/ngx_mail_proxy_module.c:1257:        return;
+src/mail/ngx_mail_proxy_module.c:1262:        return;
+src/mail/ngx_mail_proxy_module.c:1267:        return;
+src/mail/ngx_mail_proxy_module.c:1272:        return;
+src/mail/ngx_mail_proxy_module.c:1277:        return;
+src/mail/ngx_mail_proxy_module.c:1300:        return;
+src/mail/ngx_mail_smtp_handler.c:67:        return;
+src/mail/ngx_mail_smtp_handler.c:74:        return;
+src/mail/ngx_mail_smtp_handler.c:83:        return;
+src/mail/ngx_mail_smtp_handler.c:127:        return;
+src/mail/ngx_mail_smtp_handler.c:136:        return;
+src/mail/ngx_mail_smtp_handler.c:168:        return;
+src/mail/ngx_mail_smtp_handler.c:298:        return;
+src/mail/ngx_mail_smtp_handler.c:307:        return;
+src/mail/ngx_mail_smtp_handler.c:345:            return;
+src/mail/ngx_mail_smtp_handler.c:358:                return;
+src/mail/ngx_mail_smtp_handler.c:366:            return;
+src/mail/ngx_mail_smtp_handler.c:391:        return;
+src/mail/ngx_mail_smtp_handler.c:398:            return;
+src/mail/ngx_mail_smtp_handler.c:447:        return;
+src/mail/ngx_mail_smtp_handler.c:456:            return;
+src/mail/ngx_mail_smtp_handler.c:459:        return;
+src/mail/ngx_mail_smtp_handler.c:469:            return;
+src/mail/ngx_mail_smtp_handler.c:472:        return;
+src/mail/ngx_mail_smtp_handler.c:476:        return;
+src/mail/ngx_mail_smtp_handler.c:562:        return;
+src/mail/ngx_mail_smtp_handler.c:566:        return;
+src/mail/ngx_mail_smtp_handler.c:589:            return;
+src/mail/ngx_mail_smtp_handler.c:917:        return;
